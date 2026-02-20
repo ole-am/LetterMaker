@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+    <id>lettermaker</id>
+    <name>LetterMaker</name>
+    <summary>An easy-to-use app for creating letters and envelopes using custom templates.</summary>
+    <description>Create professional letters and matching envelopes in PDF format using HTML-based templates. 
+        Easily add and customize sender and recipient details, subject line, date, and body text to generate
+        ready-to-print documents.</description>
+    <version>0.1.0</version>
+    <licence>agpl</licence>
+    <author mail="development@oa-web.de">Ole Am</author>
+    <namespace>LetterMaker</namespace>
+    <category>office</category>
+    <website>https://github.com/ole-am/LetterMaker</website>
+    <bugs>https://github.com/ole-am/LetterMaker/issues</bugs>
+    <dependencies>
+        <nextcloud min-version="31" max-version="32" />
+    </dependencies>
+    <repair-steps>
+        <install>
+            <step>OCA\LetterMaker\Repair\CopyTemplates</step>
+        </install>
+        <uninstall>
+            <step>OCA\LetterMaker\Repair\ClearAppData</step>
+        </uninstall>
+    </repair-steps>
+    <settings>
+        <admin>OCA\LetterMaker\Settings\AdminSettings</admin>
+        <admin-section>OCA\LetterMaker\Settings\AdminSection</admin-section>
+    </settings>
+    <navigations>
+        <navigation>
+            <name>LetterMaker</name>
+            <route>lettermaker.page.index</route>
+            <icon>app.svg</icon>
+        </navigation>
+    </navigations>
+</info>

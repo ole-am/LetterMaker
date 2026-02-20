@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Envelope</title>
+    <style>
+        /* @template-type: envelope */
+        /* @template-id: envelope-slim-v2-c6 */
+        /* @template-name: Slim (C6-like) */
+        /* @template-height: 114mm */
+        /* @template-width: 162mm */
+        /* @stamp-position-x: 105 */
+        /* @stamp-position-y: 10 */
+        /* @stamp-height: 41 */
+        /* @stamp-width: 50 */
+        /* @stamp-rotation: -90 */
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        @page {
+            size: 162mm 114mm landscape;
+            margin: 0;
+        }
+        
+        body {
+            width: 162mm;
+            height: 114mm;
+            position: relative;
+            font-family: 'DejaVu Sans', Arial, sans-serif;
+        }
+        
+        .sender {
+            position: absolute;
+            left: 15mm;
+            top: 15mm;
+            font-size: 10pt;
+            line-height: 1.2;
+            width: 85mm;
+        }
+        
+        .recipient {
+            position: absolute;
+            right: 15mm;
+            bottom: 25mm;
+            font-size: 12pt;
+            line-height: 6mm;
+            width: 59mm;
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="sender">
+        {sender_name}<br>
+		{sender_street}<br>
+		{sender_zip} {sender_city}
+    </div>
+    
+    <div class="recipient">
+        {recipient_name}<br>
+        {recipient_info}<br>
+        {recipient_street}<br>
+        {recipient_zip} {recipient_city}
+    </div>
+    
+</body>
+</html>

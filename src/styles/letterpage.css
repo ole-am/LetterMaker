@@ -1,0 +1,127 @@
+.letter_page_heading {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 44px;
+}
+
+.subject_date_row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: calc(var(--default-grid-baseline, 4px) * 3);
+    align-items: end;
+}
+
+.address_form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: calc(var(--default-grid-baseline, 4px) * 3);
+}
+
+.address_form h3,
+.address_form h4 {
+    margin-top: 0;
+}
+
+.address_form_spacer {
+    min-height: 1px;
+}
+
+.subject_left_column {
+    display: grid;
+    gap: calc(var(--default-grid-baseline, 4px) * 3);
+}
+
+.letter-page .dialog-content {
+    display: grid;
+    gap: calc(var(--default-grid-baseline, 4px) * 3);
+}
+
+
+.error_model_content {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-main-text);
+    text-align: center;
+    padding: calc(var(--default-grid-baseline, 4px) * 3);
+}
+
+.letter_actions_row {
+    display: flex;
+    justify-content: space-between;
+    gap: calc(var(--default-grid-baseline, 4px) * 3);
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.letter_actions_right {
+    display: flex;
+    gap: calc(var(--default-grid-baseline, 4px) * 2);
+    align-items: center;
+}
+
+.letter_actions_stamp {
+    display: flex;
+    align-items: center;
+}
+
+.letter_actions_envelope {
+    display: flex;
+    gap: calc(var(--default-grid-baseline, 4px) * 2);
+    align-items: center;
+}
+
+.required-field .input-field__label::after {
+    content: ' *';
+    color: var(--color-main-text);
+    font-size: 0.75em;
+    vertical-align: super;
+}
+
+.envelope_type_select {
+    min-width: 220px;
+}
+
+@media (max-width: 720px) {
+    .address_form {
+        grid-template-columns: 1fr;
+    }
+
+    .address_spacer {
+        display: none;
+    }
+
+    .subject_date_row {
+        grid-template-columns: 1fr;
+    }
+
+    .letter_actions_row {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+    }
+
+    .letter_actions_right {
+        display: contents;
+    }
+
+    .letter_actions_print {
+        justify-self: start;
+    }
+
+    .letter_actions_stamp {
+        justify-self: end;
+    }
+
+    .letter_actions_envelope {
+        grid-column: 1 / -1;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .envelope_type_select {
+        width: auto;
+        flex: 1 1 auto;
+    }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Envelope</title>
+    <style>        
+        /* @template-type: envelope */
+        /* @template-id: envelope-long-v2-dl */
+        /* @template-name: Long v2 (DL-like) */
+        /* @template-height: 110mm */
+        /* @template-width: 220mm */
+        /* @stamp-position-x: 160 */
+        /* @stamp-position-y: 5 */
+        /* @stamp-height: 45.5 */
+        /* @stamp-width: 54.6 */
+        /* @stamp-rotation: -90 */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        @page {
+            size: 220mm 110mm landscape;
+            margin: 0;
+        }
+        
+        body {
+            width: 220mm;
+            height: 110mm;
+            position: relative;
+            font-family: 'DejaVu Sans', Arial, sans-serif;
+        }
+        
+        .sender {
+            position: absolute;
+            left: 15mm;
+            top: 15mm;
+            font-size: 10pt;
+            line-height: 1.2;
+            width: 85mm;
+        }
+        
+        .recipient {
+            position: absolute;
+            right: 25mm;
+            bottom: 25mm;
+            font-size: 12pt;
+            line-height: 6mm;
+            width: 75mm;
+        }
+    
+
+    </style>
+</head>
+<body>
+    <div class="sender">
+        {sender_name}<br>
+		{sender_info}<br>
+		{sender_street}<br>
+		{sender_zip} {sender_city}<br>
+    </div>
+    
+    <div class="recipient">
+        {recipient_name}<br>
+        {recipient_info}<br>
+        {recipient_street}<br>
+        {recipient_zip} {recipient_city}
+    </div>
+
+</body>
+</html>

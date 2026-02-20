@@ -1,0 +1,42 @@
+.quill-editor {
+    min-height: 360px;
+    width: 100%;
+}
+
+.quill-editor .ql-editor {
+    min-height: 360px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.quill-editor select,
+.quill-editor button:not(.button-vue, [class^=vs__]),
+.quill-editor input,
+.quill-editor textarea,
+.quill-editor div[contenteditable=true],
+.quill-editor div[contenteditable=false] {
+    width: 100%;
+}
+
+.ql-toolbar.ql-snow {
+    border-radius: 8px;
+    border: 1px solid #b3b3b3;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.ql-container.ql-snow {
+    border-radius: 8px;
+    border: 1px solid #b3b3b3;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    margin-top: 0 !important;
+}
+
+.quill-editor div[contenteditable=true] {
+    margin-top: 0 !important;
+}

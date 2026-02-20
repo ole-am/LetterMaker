@@ -1,0 +1,55 @@
+# Dependencies
+/node_modules/
+/vendor/
+
+# Build outputs
+/js/*.js
+/js/*.js.map
+/js/chunks/
+/css/*.css
+/css/*.css.map
+
+# Development
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+*.swp
+*.swo
+*~
+
+# IDE
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Composer
+composer.lock
+composer.phar
+
+# NPM
+package-lock.json
+yarn.lock
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+
+# OS
+Thumbs.db
+.directory
+
+# Build artifacts
+/build/
+/dist/
+
+# PHP
+.phpunit.result.cache
+/.phpcs-cache
+
+# Nextcloud specific
+/krankerl.toml
+*.tar.gz
+*.zip

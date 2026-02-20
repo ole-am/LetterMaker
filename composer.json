@@ -1,0 +1,19 @@
+{
+    "name": "ole-am/lettermaker",
+    "description": "A simple app to create letters and envelopes based on custom templates.",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "OleAm\\Lettermaker\\": "lib/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ole Am",
+            "email": "development@oa-web.de"
+        }
+    ],
+    "require": {
+        "mpdf/mpdf": "^8.2"
+    }
+}

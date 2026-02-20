@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter</title>
+    <style>
+        /* @template-type: letter */
+        /* @template-id: letter */
+        /* @template-name: Letter (DIN 5008-like) */
+        /* @template-height: 297mm */
+        /* @template-width: 210mm */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'DejaVu Sans', Arial, sans-serif;
+            font-size: 12pt;
+            line-height: 1.5;
+            margin: 0;
+            width: 210mm;
+            height: 297mm;
+            position: relative;
+        }
+
+        .foldingmark-top,
+        .foldingmark-bottom,
+        .foldingmark-middle {
+            position: absolute;
+            left: 0;
+            width: 5mm;
+            height: 0.5mm;
+            background: black;
+        }
+
+        .foldingmark-top {
+            top: 100mm;
+        }
+
+        .foldingmark-bottom {
+            top: 205mm;
+        }
+
+        .foldingmark-middle {
+            top: 148mm;
+        }
+
+        .sender {
+            position: absolute;
+            left: 25mm;
+            top: 55mm;
+            font-size: 8pt;
+            line-height: 1.2;
+            width: 85mm;
+        }
+
+        .recipient {
+            position: absolute;
+            left: 25mm;
+            top: 63.5mm;
+            font-size: 12pt;
+            line-height: 6mm;
+            width: 85mm;
+        }
+
+        .date {
+            position: absolute;
+            top: 95mm;
+            right: 25mm;
+            font-size: 11pt;
+        }
+
+        .content {
+            position: absolute;
+            top: 105mm;
+            left: 25mm;
+            right: 20mm;
+            width: auto;
+        }
+
+        .subject {
+            font-weight: bold;
+            margin-bottom: 12mm;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="foldingmark-top"></div>
+    <div class="foldingmark-bottom"></div>
+    <div class="foldingmark-middle"></div>
+
+    <div class="sender">
+        {sender_name} · {sender_street} · {sender_zip} {sender_city}
+    </div>
+
+    <div class="recipient">
+        {recipient_name}<br>
+        {recipient_info}<br>
+        {recipient_street}<br>
+        {recipient_zip} {recipient_city}
+    </div>
+
+    <div class="date">
+        {date}
+    </div>
+
+    <div class="content">
+        <div class="subject">
+            {subject}
+        </div>
+
+        {lettertext_html}
+
+    </div>
+
+</body>
+</html>
