@@ -8,7 +8,7 @@
         Easily add and customize sender and recipient details, subject line, date, and body text to generate
         ready-to-print documents.</description>
     <version>0.1.0</version>
-    <licence>agpl</licence>
+    <licence>AGPL-3.0-or-later</licence>
     <author mail="development@oa-web.de">Ole Am</author>
     <namespace>LetterMaker</namespace>
     <category>office</category>
