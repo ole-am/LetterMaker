@@ -1,6 +1,8 @@
 ﻿# LetterMaker
 An easy-to-use Nextcloud app for creating letters and envelopes using custom templates.
 
+![Screenshot](screenshot.png)
+
 ## Features
 - Generate letters as PDF
 - Generate envelopes as PDF (with or without custom stamps)
