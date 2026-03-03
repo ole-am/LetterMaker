@@ -39,7 +39,7 @@
     "Cancel": "Abbrechen",
     "Confirm": "Bestätigen",
     "Templates should be named after the template-id+.html": "Vorlagen sollten nach der template-id+.html benannt werden",
-    "To use the Stamp feature, please select the format \"<strong>Seiko SLP-Stamp 1 42x36</strong>\" when purchasing.": "Um das Briefmarken-Feature zu verwenden, bitte beim Kauf \"<strong>Seiko SLP-Stamp 1 42x36</strong>\" auswählen.",
+    "To use the Stamp feature, please select the format \"<strong>Seiko SLP-Stamp 1 42x36</strong>\" when purchasing. (\"Seiko\" is a trademark of Seiko Epson Corporation. The LetterMaker-App is not affiliated with or endorsed by Seiko in any way)": "Um das Briefmarken-Feature zu verwenden, bitte beim Kauf \"<strong>Seiko SLP-Stamp 1 42x36</strong>\" auswählen. (\"Seiko\" ist eine Marke der Seiko Epson Corporation. Die LetterMaker-App steht in keiner Verbindung zu Seiko und wird von Seiko weder unterstützt noch empfohlen.)",
     "The standard templates are based on DIN standards but differ in certain aspects. They are provided for guidance purposes only and may vary depending on individual print settings. Therefore, no liability or warranty is assumed.": "Die Standardvorlagen orientieren sich an den DIN-Normen, weichen jedoch in einzelnen Punkten davon ab. Sie dienen ausschließlich als Orientierungshilfe und können je nach Druckereinstellungen unterschiedlich dargestellt werden. Eine Haftung oder Gewährleistung wird daher nicht übernommen."
   },
   "pluralForm": "nplurals=2; plural=(n != 1);"

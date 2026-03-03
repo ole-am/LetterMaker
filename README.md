@@ -1,7 +1,7 @@
 ﻿# LetterMaker
 An easy-to-use Nextcloud app for creating letters and envelopes using custom templates.
 
-![Screenshot](screenshot.png)
+![Screenshot 1](screenshot-user.png)
 
 ## Features
 - Generate letters as PDF
@@ -19,7 +19,7 @@ An easy-to-use Nextcloud app for creating letters and envelopes using custom tem
 3. **"Print Letter"** downloads the letter as a PDF.
 4. Select an envelope template, optionally upload a stamp as PDF, then click **"Print Envelope"**.
 
-> To use the Stamp feature in combination with the default templates, please select the format **"Seiko SLP-Stamp 1 42x36"** when purchasing.
+> To use the Stamp feature in combination with the default templates, please select the format **"Seiko SLP-Stamp 1 42x36"** when purchasing. ("Seiko" is a trademark of Seiko Epson Corporation. The LetterMaker-App is not affiliated with or endorsed by Seiko in any way).
 
 
 ## Template Format

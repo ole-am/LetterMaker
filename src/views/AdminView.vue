@@ -22,7 +22,7 @@
                 <h4>{{ t('lettermaker', 'Envelopes') }}</h4>
                 <p
                     class="heading-row__hint"
-                    v-html='t("lettermaker", "To use the Stamp feature, please select the format \"<strong>Seiko SLP-Stamp 1 42x36</strong>\" when purchasing.")'>
+                    v-html='t("lettermaker", "To use the Stamp feature, please select the format \"<strong>Seiko SLP-Stamp 1 42x36</strong>\" when purchasing. (\"Seiko\" is a trademark of Seiko Epson Corporation. The LetterMaker-App is not affiliated with or endorsed by Seiko in any way)")'>
                 </p>
             </div>
 
