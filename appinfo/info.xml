@@ -21,7 +21,7 @@ Checkout the GitHub-Repository https://github.com/ole-am/LetterMaker or the Admi
 
 	]]></description>
     <version>1.0.0</version>
-    <licence>AGPL-3.0-or-later</licence>
+    <licence>agpl</licence>
     <author mail="development@oa-web.de">Ole Am</author>
     <namespace>LetterMaker</namespace>
     <category>office</category>
