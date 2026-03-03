@@ -2,15 +2,15 @@
 
 namespace OCA\LetterMaker\Repair;
 
-use OCP\Files\AlreadyExistsException;
-use OCP\Files\IAppData;
-use OCP\Files\NotFoundException;
+use OCP\IConfig;
 use OCP\Migration\IOutput;
 use OCP\Migration\IRepairStep;
 
 class CopyTemplates implements IRepairStep
 {
-    public function __construct(private IAppData $appData)
+    private const APP_ID = 'lettermaker';
+
+    public function __construct(private IConfig $config)
     {
     }
 
@@ -26,24 +26,25 @@ class CopyTemplates implements IRepairStep
             return;
         }
 
-        $templatesFolder = $this->getOrCreateAppDataFolder('templates');
-        $this->copyHtmlFiles($sourceRoot, $templatesFolder);
-    }
-
-    private function getOrCreateAppDataFolder(string $name)
-    {
-        try {
-            return $this->appData->getFolder($name);
-        } catch (NotFoundException $e) {
-            try {
-                return $this->appData->newFolder($name);
-            } catch (AlreadyExistsException $e) {
-                return $this->appData->getFolder($name);
+        $targetRoot = $this->getTemplatesDir();
+        if (!is_dir($targetRoot)) {
+            if (!@mkdir($targetRoot, 0770, true) && !is_dir($targetRoot)) {
+                return;
             }
         }
+
+        $this->copyHtmlFiles($sourceRoot, $targetRoot);
     }
 
-    private function copyHtmlFiles(string $sourceDir, $targetFolder): void
+    private function getTemplatesDir(): string
+    {
+        $dataDir = rtrim((string) $this->config->getSystemValue('datadirectory', ''), "/\\");
+        $instanceId = (string) $this->config->getSystemValue('instanceid', '');
+
+        return $dataDir . '/appdata_' . $instanceId . '/' . self::APP_ID . '/templates';
+    }
+
+    private function copyHtmlFiles(string $sourceDir, string $targetDir): void
     {
         $entries = @scandir($sourceDir);
         if ($entries === false) {
@@ -55,18 +56,19 @@ class CopyTemplates implements IRepairStep
                 continue;
             }
 
+            $targetPath = $targetDir . '/' . $entry;
+            if (is_file($targetPath)) {
+                // Keep existing file untouched.
+                continue;
+            }
+
             $sourcePath = $sourceDir . '/' . $entry;
             $content = @file_get_contents($sourcePath);
             if ($content === false) {
                 continue;
             }
 
-            try {
-                $targetFile = $targetFolder->newFile($entry);
-                $targetFile->putContent($content);
-            } catch (AlreadyExistsException $e) {
-                // Keep existing file untouched.
-            }
+            @file_put_contents($targetPath, $content);
         }
     }
 }
