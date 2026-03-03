@@ -32,6 +32,7 @@
     color: var(--color-text-maxcontrast);
     font-size: 0.9rem;
     margin: 0;
+    text-align: right;
 }
 
 #lettermaker-admin-app .template-list {

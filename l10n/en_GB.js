@@ -40,7 +40,7 @@ OC.L10N.register(
     "Cancel": "Cancel",
     "Confirm": "Confirm",
     "Templates should be named after the template-id+.html": "The template should be named after the template-id+.html",
-    "To use the Stamp feature, please select the format \"<strong>Seiko SLP-Stamp 1 42x36</strong>\" when purchasing.": "To use the Stamp feature, please select the format \"<strong>Seiko SLP-Stamp 1 42x36</strong>\" when purchasing.",
+    "To use the Stamp feature, please select the format \"<strong>Seiko SLP-Stamp 1 42x36</strong>\" when purchasing. (\"Seiko\" is a trademark of Seiko Epson Corporation. The LetterMaker-App is not affiliated with or endorsed by Seiko in any way)": "To use the Stamp feature, please select the format \"<strong>Seiko SLP-Stamp 1 42x36</strong>\" when purchasing. (\"Seiko\" is a trademark of Seiko Epson Corporation. The LetterMaker-App is not affiliated with or endorsed by Seiko in any way)",
     "The standard templates are based on DIN standards but differ in certain aspects. They are provided for guidance purposes only and may vary depending on individual print settings. Therefore, no liability or warranty is assumed.": "The standard templates are based on DIN standards but differ in certain aspects. They are provided for guidance purposes only and may vary depending on individual print settings. Therefore, no liability or warranty is assumed.",
   },
   "nplurals=2; plural=(n != 1);"
